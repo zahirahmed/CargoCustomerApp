@@ -8,6 +8,7 @@ import {
   StatusBar,
   Dimensions,
   Animated,
+  Alert
 } from 'react-native'
 
 var {height, width} = Dimensions.get('screen')
@@ -35,7 +36,14 @@ export default class Splash extends Component {
             <ImageBackground 
                 source={require('../images/splashbg.jpg')} 
                 style={styles.backgroundImage}>
-                
+
+                <StatusBar  
+                    backgroundColor = "#117eb6"  
+                    barStyle = "light-content"   
+                    hidden = {false}    
+                    translucent = {true}  
+                /> 
+
                 <Animated.Image 
                     style={{...styles.logo, opacity : this.state.logoOpacity}}
                     source={require('../images/logo.png')}>
