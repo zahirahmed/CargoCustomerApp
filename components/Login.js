@@ -17,7 +17,6 @@ import {COLOR_DARK_BLUE, COLOR_LIGHT_BLUE} from '../Colors/Colors'
 import { Dialog } from 'react-native-simple-dialogs'
 import MyDialog from './MyDialog'
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button'
-import {RadioButton,RadioButtonGroup,setTheme} from 'react-native-material-kit'
 
 var {height, width} = Dimensions.get('screen')
 
@@ -25,13 +24,6 @@ var radio_props = [
     {label: 'Customer', value: 0 },
     {label: 'Vehivle Owner', value: 1 }
   ];
-
-  setTheme({checkboxStyle: {
-    fillColor: MKColor.Amber,
-    borderOnColor: MKColor.Amber,
-    borderOffColor: `rgba(${MKColor.RGBAmber},.65)`,
-    rippleColor: `rgba(${MKColor.RGBTeal},.15)`,
-  }});
 
 export default class Login extends Component {
 
@@ -105,7 +97,6 @@ export default class Login extends Component {
                             </Text>
 
                             <View style={{marginTop: 30}}>
-
                                 <RadioForm
                                     radio_props={radio_props}
                                     initial={0}
@@ -123,20 +114,6 @@ export default class Login extends Component {
                                     onPress={(value) => {this.setState({value:value})}}
                                     />
                                     
-                            </View>
-
-                            <View style={styles.row}>
-                                <View style={styles.col}>
-                                    <RadioButton
-                                    checked={true}
-                                    group={this.radioGroup}
-                                    />
-                                    <Text style={styles.legendLabel}>First</Text>
-                                </View>
-                                <View style={styles.col}>
-                                    <RadioButton group={this.radioGroup}/>
-                                    <Text style={styles.legendLabel}>Second</Text>
-                                </View>
                             </View>
 
                             <View style={styles.continueCon}>

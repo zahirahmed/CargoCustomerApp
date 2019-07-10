@@ -8,6 +8,9 @@ export default class MyDialog extends React.PureComponent {
             <Modal 
                 animationType="fade"
                 transparent={true}
+                onRequestClose={() => {
+                    this.setDialogVisible(!this.state.dialogVisible);
+                    }}
                 visible={this.props.visible}
                 >
                     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.5)'}}>
