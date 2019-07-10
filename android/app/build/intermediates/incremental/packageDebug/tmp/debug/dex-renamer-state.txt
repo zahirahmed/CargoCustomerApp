@@ -1,4 +1,4 @@
-#Tue Jul 09 14:44:40 IST 2019
+#Wed Jul 10 18:25:02 IST 2019
 base.0=/home/hp/ReactNativeProjects/CargoCustomerApp/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

@@ -116,18 +116,19 @@ export default class Login extends Component {
                                     
                             </View>
 
-                            <View style={styles.continueCon}>
-                                <View style={styles.continueConIn}>
-                                    
-                                    <Text style={styles.nextStyle}>
-                                        CONTINUE
-                                    </Text>
-
-                                </View>
-                    
-                            </View>
                         </View>
                     
+                        <View 
+                            style={styles.continueCon}>
+                                 
+                                 <Text 
+                                    onPress={() => this.setState({dialogVisible: false})}
+                                    style={styles.continueStyle}>
+                                     CONTINUE
+                                 </Text>
+
+                        </View>
+
                 </Dialog>
 
                     <Text
@@ -215,55 +216,35 @@ const styles = StyleSheet.create({
         fontFamily: 'Poppins-Regular',
     },
     registerDialog: {
-        
-        flexDirection: 'column',
         alignItems: 'center',
-        backgroundColor: 'white',
-        borderRadius: 15,
     },
-      registerNew: {
+    registerNew: {
         fontWeight : 'bold',
-        
         fontSize: 20,
         color: 'black',
         fontFamily: 'Poppins-Medium',
-      },
-      registerSubText: {
+    },
+    registerSubText: {
         fontSize: 15,
         color: 'black',
         marginTop: 10,
         textAlign: 'center',
         fontFamily: 'Poppins-Regular',
-      },
-      continueStyle: {
-        flex: 1,
-        backgroundColor: '#009fd6',
-        borderRadius: 30,
-        color: 'white',
-        fontWeight: 'bold',
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 15,
-        paddingRight: 15,
-        fontFamily: 'Poppins-Regular',
-        alignSelf : 'stretch'
     },
     continueCon: {
-        backgroundColor: '#009fd6',
-        borderRadius: 40,
-        marginTop: 20,
         marginTop: 40,
-        alignContent: 'flex-end',
-        flexDirection: 'row',
-        alignItems: 'flex-end'
+        justifyContent: 'center', 
+        padding: 15, 
+        borderRadius : 30, 
+        flexDirection: 'row', 
+        backgroundColor: '#009fd6'
     },
-    continueConIn: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignContent: 'center',
-        alignItems: 'center',
-        padding: 5,
+    continueStyle: {
+        flex:1,
+        color: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        fontFamily: 'Poppins-Regular',
     },
     con: {
         flex: 1,
