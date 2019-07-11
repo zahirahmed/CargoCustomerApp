@@ -71,7 +71,11 @@ export default class Login extends Component {
 
                         </TextInput>
 
-                        <Text style={styles.nextStyle}>
+                        <Text
+                            onPress={ () => {
+                                this.props.navigation.navigate("HomeScreen")
+                            }} 
+                            style={styles.nextStyle}>
                             NEXT
                         </Text>
 
@@ -118,11 +122,17 @@ export default class Login extends Component {
 
                         </View>
                     
+
                         <View 
                             style={styles.continueCon}>
                                  
                                  <Text 
-                                    onPress={() => this.setState({dialogVisible: false})}
+                                    onPress={ () => {
+
+                                        this.setState({dialogVisible: false})
+
+                                        this.props.navigation.navigate("SignUp")
+                                    }}
                                     style={styles.continueStyle}>
                                      CONTINUE
                                  </Text>

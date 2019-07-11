@@ -1,20 +1,32 @@
-// import Splash from './Splash';
-// import Login from './Login';
+import Splash from './Splash';
+import Login from './Login';
+import SignUp from './SignUp';
+import HomeScreen from './HomeScreen';
 
-// import {createStackNavigator, createAppContainer} from 'react-navigation';
+import {StackNavigator} from 'react-navigation';
 
-// const AppNavigator = createStackNavigator({
-//     //Screens
-//     Splash: {
-//         screen : Splash
-//     },
-//     Login: {
-//         screen: Login
-//     },  
+const AppNavigator = StackNavigator({
+    //Screens
+    Splash: {
+        screen : Splash
+    },
+    Login: {
+        screen: Login
+    },  
+    SignUp: {
+        screen: SignUp
+    },
+    HomeScreen: {
+        screen: HomeScreen
+    },
 
-// }, {
-//     //Settings
-//     initialRouteName: 'Splash'
-// })
+}, {
+    //Settings
+    initialRouteName: 'Splash',
+    headerMode: 'none',
+    navigationOptions: {
+      headerVisible: false,
+    }
+})
 
-// export default createAppContainer(AppNavigator)
+export default AppNavigator;

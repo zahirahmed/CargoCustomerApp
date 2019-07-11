@@ -7,12 +7,12 @@ import {
   ImageBackground,
   StatusBar,
   Dimensions,
-  Animated,
   TextInput,
-  Modal,
   TouchableHighlight,
   TouchableWithoutFeedback,
-  ScrollView
+  ScrollView,
+  SafeAreaView,
+  Switch
 } from 'react-native'
 import {COLOR_DARK_BLUE, COLOR_LIGHT_BLUE} from '../Colors/Colors'
 import PasswordInputText from 'react-native-hide-show-password-input';
@@ -31,20 +31,35 @@ export default class SignUp extends Component {
     state = {
         password: '',
     };
-    
+
+    constructor(){
+        super();
+        this.state = {
+          switchValue: false
+        }
+    }
+
+    onSwitchChange(value){
+        this.setState({
+            switchValue: value
+        });
+    }
+
     render(){
         const { password } = this.state;
         return(
+            <SafeAreaView style={{flex:1}} backgroundColor= "white">
             <ScrollView contentContainerStyle={styles.contentContainer}>
             <View 
                 style={styles.backgroundImage}>
                 
-                <StatusBar  
+
+                {/* <StatusBar  
                     backgroundColor = "#117eb6"  
                     barStyle = "light-content"   
                     hidden = {false}    
                     translucent = {true}  
-                />  
+                />   */}
 
                 <Image 
                     style={styles.logo}
@@ -52,26 +67,40 @@ export default class SignUp extends Component {
 
                 </Image>
 
-                {/* <View style={{
+                <View style={{
+                    flex:1,
                     flexDirection:'row',
                     alignSelf:'stretch',
-                    justifyContent:'space-between'
+                    justifyContent:'space-between',
+                    marginTop: 20
                     }}>
                     <FloatingLabel
                         labelStyle={styles.labelInput}
                         inputStyle={styles.input}
-                        style={styles.hformInput}
+                        style={{
+                            borderBottomWidth: 1,
+                            width:'48%' ,
+                            borderColor: 'gray', 
+                            alignSelf:'stretch', 
+                            
+                        }}
                         disableFullscreenUI={true}
                         
                     >First Name</FloatingLabel>
                     <FloatingLabel
                         labelStyle={styles.labelInput}
                         inputStyle={styles.input}
-                        style={styles.hformInput}
+                        style={{
+                            borderBottomWidth: 1, 
+                            borderColor: 'gray', 
+                            width:'48%' ,
+                            alignSelf:'stretch', 
+                            
+                        }}
                         disableFullscreenUI={true}
                         
                     >Last Name</FloatingLabel>
-                </View> */}
+                </View>
 
                 <FloatingLabel
                     labelStyle={styles.labelInput}
@@ -107,16 +136,38 @@ export default class SignUp extends Component {
                 <View style={{
                     flexDirection:'row',
                     alignSelf:'stretch',
-                    justifyContent:'space-between'
+                    marginTop:30,
+                    justifyContent:'space-between',
                     }}>
-                    <Text style={{color:'gray',marginTop:20,fontSize:18,alignSelf:'flex-start'}}>Have any Criminal Record</Text>
+
+                    <Text 
+                        style={{
+                            color:'gray',
+                            fontSize:18,
+                            alignSelf:'flex-start'
+                        }}>Have any Criminal Record</Text>
+
+                    <Switch
+                        style={{
+                            color:'green',
+                            
+                        }}
+                        value={this.state.switchValue}
+                        onValueChange={(value) => this.onSwitchChange(value)}>
+
+                    </Switch>
                     
                 </View>
 
                 <FloatingLabel
                     labelStyle={styles.labelInput}
                     inputStyle={styles.input}
-                    style={styles.formInput}
+                    style={{
+                        borderBottomWidth: 1, 
+                        borderColor: 'gray', 
+                        alignSelf:'stretch',
+                        marginTop:10
+                    }}
                     disableFullscreenUI={true}
                 >Details About Their Criminal Record</FloatingLabel>
 
@@ -152,10 +203,15 @@ export default class SignUp extends Component {
                             color: 'black', 
                             fontFamily: 'Poppins-Regular',
                             }}>
-                        Already have an Account? <Text style={{textDecorationLine:'underline',fontWeight: 'bold',color:'#009fd6'}}>SIGNIN</Text>
+                        Already have an Account? <Text 
+                        
+                        onPress={() => this.props.navigation.goBack()}
+
+                        style={{textDecorationLine:'underline',fontWeight: 'bold',color:'#009fd6'}}>SIGNIN</Text>
                     </Text>
             </View>
             </ScrollView>
+            </SafeAreaView>
         );
     }
 
@@ -251,7 +307,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#009fd6'
     },
     contentContainer: {
-        paddingVertical: 10
+        paddingVertical: 10,
+        backgroundColor: 'white'
     },
     continueStyle: {
         flex:1,
@@ -277,10 +334,7 @@ const styles = StyleSheet.create({
         marginTop:20
     },
     hformInput: {    
-        borderBottomWidth: 1, 
-        borderColor: 'gray', 
-        marginTop:20,
-        alignSelf:'stretch'
+        
     },
     input: {
         borderWidth: 0

@@ -24,6 +24,9 @@ export default class Splash extends Component {
             })
         ]).start()
 
+        setTimeout(() => {
+            this.props.navigation.navigate("Login");
+        }, 3000);
     }
 
     state = {
