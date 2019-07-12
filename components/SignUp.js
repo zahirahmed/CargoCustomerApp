@@ -27,7 +27,9 @@ var radio_props = [
   ];
 
 export default class SignUp extends Component {
-
+    static navigationOptions = {
+        header: null
+    }
     state = {
         password: '',
     };

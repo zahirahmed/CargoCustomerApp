@@ -67,7 +67,8 @@ export default class ForgotPassword extends Component {
                 <View 
                     style={styles.continueCon}>       
                     <Text 
-                        style={styles.continueStyle}>
+                        style={styles.continueStyle}
+                        onPress={() => this.props.navigation.navigate('OTPScreen')}>
                         CONTINUE
                     </Text>
                 </View>
@@ -77,7 +78,8 @@ export default class ForgotPassword extends Component {
                             marginTop: 50, 
                             color: 'black', 
                             fontFamily: 'Poppins-Regular',
-                            }}>
+                            }}
+                            onPress={() => this.props.navigation.goBack()}>
                         Back to <Text style={{textDecorationLine:'underline',fontWeight: 'bold',color:'#009fd6'}}>SIGNIN</Text>
                     </Text>
             </View>

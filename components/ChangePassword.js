@@ -113,7 +113,9 @@ export default class ChangePassword extends Component {
                             color: 'black', 
                             fontFamily: 'Poppins-Regular',
                             }}>
-                        Back to <Text style={{textDecorationLine:'underline',fontWeight: 'bold',color:'#009fd6'}}>SIGNIN</Text>
+                        Back to <Text 
+                        onPress={() => this.props.navigation.goBack()}
+                        style={{textDecorationLine:'underline',fontWeight: 'bold',color:'#009fd6'}}>SIGNIN</Text>
                     </Text>
             </View>
             </ScrollView>

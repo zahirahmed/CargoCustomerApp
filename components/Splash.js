@@ -14,7 +14,9 @@ import {
 var {height, width} = Dimensions.get('screen')
 
 export default class Splash extends Component {
-
+    static navigationOptions = {
+        header: null
+    }
     async componentDidMount() {
 
         Animated.sequence([

@@ -17,6 +17,7 @@ import {COLOR_DARK_BLUE, COLOR_LIGHT_BLUE} from '../Colors/Colors'
 import { Dialog } from 'react-native-simple-dialogs'
 import MyDialog from './MyDialog'
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button'
+import NavigationDrawer from './AppStackNavigator'
 
 var {height, width} = Dimensions.get('screen')
 
@@ -26,13 +27,21 @@ var radio_props = [
   ];
 
 export default class Login extends Component {
-
+    static navigationOptions = {
+        header: null
+    }
     state = {
         dialogVisible: false,
+        ldialogVisible: false,
     };
     
     setDialogVisible(visible) {
         this.setState({dialogVisible: visible});
+    }
+
+
+    setLDialogVisible(visible) {
+        this.setState({ldialogVisible: visible});
     }
 
     render(){
@@ -72,8 +81,13 @@ export default class Login extends Component {
                         </TextInput>
 
                         <Text
-                            onPress={ () => {
-                                this.props.navigation.navigate("HomeScreen")
+                            // onPress={ () => {
+                            //     this.props.navigation.navigate("HomeScreen")
+                            // }} 
+                            onPress={() => {
+
+                                this.setLDialogVisible(true);
+
                             }} 
                             style={styles.nextStyle}>
                             NEXT
@@ -140,6 +154,66 @@ export default class Login extends Component {
                         </View>
 
                 </Dialog>
+
+                <Dialog
+                    
+                    visible={this.state.ldialogVisible}
+                    title=""
+                    animationType='fade'
+                    backgroundColor='black'
+                    onTouchOutside={() => this.setState({ldialogVisible: false})} >
+
+                        <View style={styles.registerDialog}>
+                        
+                            <Text style={styles.registerNew}>
+                                Login
+                            </Text>
+                            <Text style={styles.registerSubText}>
+                                Please select your choice {"\n"}for login. 
+                            </Text>
+
+                            <View style={{marginTop: 30}}>
+                                <RadioForm
+                                    radio_props={radio_props}
+                                    initial={0}
+                                    formHorizontal={true}
+                                    labelHorizontal={true}
+                                    buttonColor={'#009fd6'}
+                                    borderWidth={0}
+                                    buttonInnerColor={'#009fd6'}
+                                    buttonOuterColor={'#009fd6'}
+                                    buttonSize={10}
+                                    buttonOuterSize={20}
+                                    buttonStyle={{borderWidth: 0.5, marginLeft: 20}}
+                                    buttonWrapStyle={{marginLeft: 20}}
+                                    animation={false}
+                                    onPress={(value) => {this.setState({value:value})}}
+                                    />
+                                    
+                            </View>
+
+                        </View>
+                    
+
+                        <View 
+                            style={styles.continueCon}>
+                                 
+                                 <Text 
+                                    onPress={ () => {
+
+                                        this.setState({ldialogVisible: false})
+
+                                        this.props.navigation.navigate("SignInScreen")
+        
+                                    }}
+                                    style={styles.continueStyle}>
+                                     CONTINUE
+                                 </Text>
+
+                        </View>
+
+                </Dialog>
+
 
                     <Text
                         onPress={() => {
