@@ -18,6 +18,7 @@ import {COLOR_DARK_BLUE, COLOR_LIGHT_BLUE} from '../Colors/Colors'
 import PasswordInputText from 'react-native-hide-show-password-input';
 
 import FloatingLabel from 'react-native-floating-labels'
+import {NavigationActions,StackActions} from 'react-navigation';
 
 var {height, width} = Dimensions.get('screen')
 
@@ -25,6 +26,11 @@ var radio_props = [
     {label: 'Customer', value: 0 },
     {label: 'Vehivle Owner', value: 1 }
   ];
+
+  const resetAction = StackActions.reset({
+    index: 0,
+    actions: [NavigationActions.navigate({ routeName: 'SignInScreen' })],
+  });
 
 export default class ChangePassword extends Component {
 
@@ -35,7 +41,9 @@ export default class ChangePassword extends Component {
     render(){
         const { password } = this.state;
         return(
-            <ScrollView contentContainerStyle={styles.contentContainer}>
+            <ScrollView 
+                style={{backgroundColor: 'white'}}
+                contentContainerStyle={styles.contentContainer}>
             <View 
                 style={styles.backgroundImage}>
                 
@@ -101,7 +109,11 @@ export default class ChangePassword extends Component {
                 <View 
                     style={styles.continueCon}>       
                     <Text 
-                        onPress={() => this.setState({dialogVisible: false})}
+                        onPress={() => {
+                                                    
+                            this.props.navigation.dispatch(resetAction);
+
+                        }}
                         style={styles.continueStyle}>
                         SUBMIT
                     </Text>
@@ -214,7 +226,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#009fd6'
     },
     contentContainer: {
-        paddingVertical: 10
+        paddingVertical: 10,
     },
     continueStyle: {
         flex:1,

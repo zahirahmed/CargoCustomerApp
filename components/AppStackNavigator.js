@@ -6,6 +6,9 @@ import OTPScreen from './OTPScreen';
 import ChangePassword from './ChangePassword';
 import SignUp from './SignUp';
 import HomeScreen from './HomeScreen';
+import HomeDestination from './HomeDestination';
+import HomePackage from './HomePackage';
+import HomeVehicle from './HomeVehicle';
 import EditProfile from './EditProfile';
 import PaymentDetails from './PaymentDetails';
 import Password from './Password';
@@ -154,6 +157,15 @@ const AppNavigator = StackNavigator({
             gesturesEnabled: false
           }
     },
+    HomeDestination: {
+        screen : HomeDestination
+    },
+    HomePackage: {
+        screen : HomePackage
+    },
+    HomeVehicle: {
+        screen: HomeVehicle
+    }
 
 }, {
     //Settings

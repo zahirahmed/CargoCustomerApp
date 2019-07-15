@@ -38,7 +38,7 @@ export default class Password extends Component {
                                 navIcon={require('../images/menu-icon.png')}
                                 onIconClicked={() => this.props.navigation.openDrawer()}
                                 titleColor="white"
-                                title="Home"
+                                title="My Profile"
                             />
                             
                     <ScrollView style = {{flex: 1,flexDirection: "column",width: "100%"}}>

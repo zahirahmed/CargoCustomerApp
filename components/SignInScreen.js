@@ -15,9 +15,9 @@ export default class SignInScreen extends Component {
 
     render() {
         return (
-          <ScrollView>
+          <ScrollView style={{backgroundColor: 'white'}}>
           <View style={styles.container}>
-              <StatusBar backgroundColor="#0D92CA" barStyle="light-content" />
+              <StatusBar backgroundColor="#117eb6" barStyle="light-content" />
             <View
               style={{
                 flex: 1,
@@ -174,7 +174,7 @@ export default class SignInScreen extends Component {
         padding:15,
         borderRadius: 30,
         alignSelf:'stretch',
-        backgroundColor: '#11B8FF',
+        backgroundColor: '#009fd6',
         justifyContent: 'center',
         alignItems: 'center'
       }

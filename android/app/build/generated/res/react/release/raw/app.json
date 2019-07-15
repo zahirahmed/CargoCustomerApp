@@ -1,0 +1,11 @@
+{
+  "name": "CargoCustomerApp",
+  "displayName": "CargoCustomerApp",
+  "expo": {
+    "name": "CargoCustomerApp",
+    "slug": "cargo-app",
+    "sdkVersion": "28.0.0",
+    "privacy": "unlisted",
+    "orientation": "portrait"
+  }
+}

@@ -11,7 +11,14 @@ import {
   Alert
 } from 'react-native'
 
+import {NavigationActions,StackActions} from 'react-navigation';
+
 var {height, width} = Dimensions.get('screen')
+
+const resetAction = StackActions.reset({
+    index: 0,
+    actions: [NavigationActions.navigate({ routeName: 'Login' })],
+  });
 
 export default class Splash extends Component {
     static navigationOptions = {
@@ -27,7 +34,7 @@ export default class Splash extends Component {
         ]).start()
 
         setTimeout(() => {
-            this.props.navigation.navigate("Login");
+            this.props.navigation.dispatch(resetAction);
         }, 3000);
     }
 

@@ -35,7 +35,7 @@ export default class ForgotPassword extends Component {
     render(){
         const { password } = this.state;
         return(
-            <ScrollView contentContainerStyle={styles.contentContainer}>
+            <ScrollView style={styles.contentContainer}>
             <View 
                 style={styles.backgroundImage}>
                 
@@ -180,7 +180,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#009fd6'
     },
     contentContainer: {
-        paddingVertical: 10
+        paddingVertical: 10,
+        backgroundColor: 'white',
     },
     continueStyle: {
         flex:1,

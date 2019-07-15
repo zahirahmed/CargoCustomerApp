@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import com.cargocustomerapp.BuildConfig;
 import com.cargocustomerapp.R;
 
+// react-native-maps
+import com.airbnb.android.react.maps.MapsPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
 
@@ -48,6 +50,7 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(),
+      new MapsPackage(),
       new VectorIconsPackage()
     ));
   }
