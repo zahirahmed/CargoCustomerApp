@@ -37,6 +37,13 @@ export default class HomeScreen extends Component {
         ),
     };
       
+  onActionSelected = position => {
+    if (position === 0) {
+      // index of 'Settings'
+      this.props.navigation.navigate("Notifications");
+    }
+  };
+
     render(){
         return(
                 <ScrollView contentContainerStyle={{flex:1}}>
@@ -46,25 +53,32 @@ export default class HomeScreen extends Component {
                             <View
                                 style={{
                                   height: 24,
-                                  backgroundColor: "#117EB6",
+                                  backgroundColor: "#19a0d4",
                                 }}
                             />
                             : null }
 
-                            <ToolbarAndroid
-                                style={{
-                                  height: 56,
-                                  backgroundColor: "#117EB6",
-                                  elevation: 4,
-                                  flexDirection: 'row'
-                                }}
-                                navIcon={require('../images/menu-icon.png')}
-                                onIconClicked={() => this.props.navigation.openDrawer()}
-                                titleColor="white"
-                                title="Home"
-                            >
-                                
-                                {/* <View style={styles.headerContainer}>
+<ToolbarAndroid
+            style={{
+              height: 56,
+              backgroundColor: "#19a0d4",
+              elevation: 4,
+              flexDirection: "row"
+            }}
+            navIcon={require("../images/menu-icon.png")}
+            onIconClicked={() => this.props.navigation.openDrawer()}
+            titleColor="white"
+            title="Home"
+            actions={[
+              {
+                title: "Settings",
+                icon: require("../images/notification-bell-black.png"),
+                show: "always"
+              }
+            ]}
+            onActionSelected={this.onActionSelected}
+          >
+            {/* <View style={styles.headerContainer}>
                                     <View style={styles.headerContainerInside}>
                                         <Text 
                                             style={styles.headerTitle}>
@@ -81,8 +95,8 @@ export default class HomeScreen extends Component {
                                     
                                 </View>
                                   */}
-                              </ToolbarAndroid>
-           
+          </ToolbarAndroid>
+
                         <View style={{flex:1, flexDirection: 'column', justifyContent: 'flex-end',}}>
                               
                               <MapView

@@ -43,7 +43,7 @@ export default class SignInScreen extends Component {
                     disableFullscreenUI={true}
                     keyboardType="number-pad"
                 >Mobile Number</FloatingLabel>
-            <FloatingLabel
+              <FloatingLabel
                     labelStyle={styles.labelInput}
                     inputStyle={styles.input}
                     style={styles.formInput}
@@ -119,7 +119,7 @@ export default class SignInScreen extends Component {
     },
     input: {
       borderWidth: 0
-  },
+    },
       lineStyle:{
         flex:1,
         marginRight:30,

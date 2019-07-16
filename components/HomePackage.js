@@ -118,7 +118,8 @@ export default class HomePackage extends Component {
                                     <View style={styles.dropOffInside}>
                                     <TextInput
                                         style={styles.recNameEd}
-                                        placeholder='Receiver Name'>
+                                        placeholder='Receiver Name'
+                                        placeholderTextColor='black'>
 
                                     </TextInput>
                                    
@@ -137,6 +138,7 @@ export default class HomePackage extends Component {
                                  
                                     <View style={styles.dropOffInside}>
                                     <TextInput
+                                        placeholderTextColor='black'
                                         style={styles.recNameEd}
                                         placeholder='Receiver Mobile Number'>
 
@@ -157,6 +159,7 @@ export default class HomePackage extends Component {
                                  
                                     <View style={styles.dropOffInside}>
                                     <TextInput
+                                        placeholderTextColor='black'
                                         style={styles.recNameEd}
                                         placeholder='Receiver Address'>
 
@@ -177,6 +180,7 @@ export default class HomePackage extends Component {
                                  
                                     <View style={styles.dropOffInside}>
                                     <TextInput
+                                        placeholderTextColor='black'
                                         style={styles.recNameEd}
                                         placeholder='Types of Goods'>
 
@@ -197,6 +201,7 @@ export default class HomePackage extends Component {
                                  
                                     <View style={styles.dropOffInside}>
                                     <TextInput
+                                        placeholderTextColor='black'
                                         style={styles.recNameEd}
                                         placeholder='Weight'>
 
@@ -217,6 +222,7 @@ export default class HomePackage extends Component {
                                  
                                     <View style={styles.dropOffInside}>
                                     <TextInput
+                                        placeholderTextColor='black'    
                                         style={styles.recNameEd}
                                         placeholder='Dimensions'>
 
@@ -237,6 +243,7 @@ export default class HomePackage extends Component {
                                  
                                     <View style={styles.dropOffInside}>
                                     <TextInput
+                                        placeholderTextColor='black'
                                         style={styles.recNameEd}
                                         placeholder='Packed In'>
 
@@ -256,6 +263,7 @@ export default class HomePackage extends Component {
                                  
                                     <View style={styles.dropOffInside}>
                                     <TextInput
+                                        placeholderTextColor='black'
                                         style={styles.recNameEd}
                                         placeholder='Quantity of Goods'>
 
@@ -344,11 +352,11 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignContent: 'flex-end',
       alignItems: 'center',
-      padding: 5
+      padding: 2
   },
   recNameEd: {
       flex: 1,
-      fontSize : 16,
+      fontSize : 14,
       paddingLeft: 10,
       fontFamily: 'Poppins-Regular',
   },

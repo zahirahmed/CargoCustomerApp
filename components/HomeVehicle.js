@@ -128,50 +128,50 @@ export default class HomeVehicle extends Component {
                             
                                     <View style={styles.bottomSheet}>
                                     <View style = {{flexDirection:"row",backgroundColor:"clear",width:"100%",height:30,marginTop:5,justifyContent: "space-between"}}>
-                                <Text style = {{width: '50%',flex: 1,fontSize: 16, color:"gray", fontWeight:"normal", margin: 5, marginTop: 5}}>
+                                <Text style = {{width: '50%',flex: 1,fontSize: 13, color:"gray", fontWeight:"normal", margin: 5, marginTop: 5}}>
                                     Trip Fare
                                 </Text>
-                                <Text style = {{textAlign:'right',width: '50%',fontSize: 16, color:"black", fontWeight:"normal", margin: 5, marginTop: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
+                                <Text style = {{textAlign:'right',width: '50%',fontSize: 13, color:"black", fontWeight:"normal", margin: 5, marginTop: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
                                     Rs.143.50
                                 </Text>
                         </View>
                         <View style = {{flexDirection:"row",backgroundColor:"clear",width:"100%",height:30,marginTop:0,justifyContent: "space-between"}}>
-                                <Text style = {{width: '50%',flex: 1,fontSize: 16, color:"gray", fontWeight:"normal", marginTop: 5, margin: 5}}>
+                                <Text style = {{width: '50%',flex: 1,fontSize: 13, color:"gray", fontWeight:"normal", marginTop: 5, margin: 5}}>
                                     SubTotal
                                 </Text>
-                                <Text style = {{textAlign:'right',width: '50%',fontSize: 16, color:"black", fontWeight:"normal", marginTop: 5, margin: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
+                                <Text style = {{textAlign:'right',width: '50%',fontSize: 13, color:"black", fontWeight:"normal", marginTop: 5, margin: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
                                 Rs.143.50
                                 </Text>
                         </View>
                         <View style = {{flexDirection:"row",backgroundColor:"clear",width:"100%",height:30,marginTop:0,justifyContent: "space-between"}}>
-                                <Text style = {{width: '50%',flex: 1,fontSize: 16, color:"gray", fontWeight:"normal", marginTop: 5, margin: 5}}>
+                                <Text style = {{width: '50%',flex: 1,fontSize: 13, color:"gray", fontWeight:"normal", marginTop: 5, margin: 5}}>
                                     Wait Time
                                 </Text>
-                                <Text style = {{textAlign:'right',width: '50%',fontSize: 16, color:"black", fontWeight:"normal", marginTop: 5, margin: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
+                                <Text style = {{textAlign:'right',width: '50%',fontSize: 13, color:"black", fontWeight:"normal", marginTop: 5, margin: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
                                     Rs.6.00
                                 </Text>
                         </View>
                         <View style = {{flexDirection:"row",backgroundColor:"clear",width:"100%",height:30,marginTop:0,justifyContent: "space-between"}}>
-                                <Text style = {{width: '50%',flex: 1,fontSize: 16, color:"gray", fontWeight:"normal", marginTop: 5, margin: 5}}>
+                                <Text style = {{width: '50%',flex: 1,fontSize: 13, color:"gray", fontWeight:"normal", marginTop: 5, margin: 5}}>
                                     Before Taxes
                                 </Text>
-                                <Text style = {{textAlign:'right',width: '50%',fontSize: 16, color:"black", fontWeight:"normal", marginTop: 5, margin: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
+                                <Text style = {{textAlign:'right',width: '50%',fontSize: 13, color:"black", fontWeight:"normal", marginTop: 5, margin: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
                                 Rs.143.18
                                 </Text>
                         </View>
                         <View style = {{flexDirection:"row",backgroundColor:"clear",width:"100%",height:30,marginTop:0,justifyContent: "space-between"}}>
-                                <Text style = {{width: '50%',flex: 1,fontSize: 16, color:"gray", fontWeight:"normal", marginTop: 5, margin: 5}}>
+                                <Text style = {{width: '50%',flex: 1,fontSize: 13, color:"gray", fontWeight:"normal", marginTop: 5, margin: 5}}>
                                     CGST (2.5%)
                                 </Text>
-                                <Text style = {{textAlign:'right',width: '50%',fontSize: 16, color:"black", fontWeight:"normal", marginTop: 5, margin: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
+                                <Text style = {{textAlign:'right',width: '50%',fontSize: 13, color:"black", fontWeight:"normal", marginTop: 5, margin: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
                                     Rs.3.58
                                 </Text>
                         </View>
                         <View style = {{flexDirection:"row",backgroundColor:"clear",width:"100%",height:30,marginTop:0,justifyContent: "space-between"}}>
-                                <Text style = {{width: '50%',flex: 1,fontSize: 16, color:"gray", fontWeight:"normal", marginTop: 5, margin: 5}}>
+                                <Text style = {{width: '50%',flex: 1,fontSize: 13, color:"gray", fontWeight:"normal", marginTop: 5, margin: 5}}>
                                     SGST/UTGST (2.5%)
                                 </Text>
-                                <Text style = {{textAlign:'right',width: '50%',fontSize: 16, color:"black", fontWeight:"normal", marginTop: 5, margin: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
+                                <Text style = {{textAlign:'right',width: '50%',fontSize: 13, color:"black", fontWeight:"normal", marginTop: 5, margin: 5, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
                                 Rs.3.58
                                 </Text>
                         </View>
@@ -225,20 +225,20 @@ export default class HomeVehicle extends Component {
                                     
                                 }}
                                     />
-                                    <Text style={{marginTop: 5,textDecorationLine:'underline',color:'gray'}} onPress={() => {
+                                    <Text style={{fontSize:13,marginTop: 5,textDecorationLine:'underline',color:'gray'}} onPress={() => {
                                         this.setDialogVisible(true);
                                     }}>View Insurance</Text>
                                 </View>
                                 </View>
-                                <Text style = {{textAlign:'right',width: '50%',fontSize: 16, color:"black", fontWeight:"normal", marginTop: 5, margin: 10, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
+                                <Text style = {{textAlign:'right',width: '50%',fontSize: 13, color:"black", fontWeight:"normal", marginTop: 5, margin: 10, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
                                 Rs.3.58
                                 </Text>
                         </View>
-                        <View style = {{flexDirection:"row",backgroundColor:"clear",width:"100%",height:40,marginTop:0,justifyContent: "space-between"}}>
-                                <Text style = {{width: '50%',flex: 1,fontSize: 16, color:"gray", fontWeight:"normal", marginTop: 5, margin: 10}}>
+                        <View style = {{flexDirection:"row",backgroundColor:"clear",width:"100%",height:40,marginTop:0,justifyContent: "space-between",alignItems: 'center'}}>
+                                <Text style = {{width: '50%',flex: 1,fontSize: 13, color:"gray", fontWeight:"normal", marginTop: 5, margin: 10}}>
                                     Collected
                                 </Text>
-                                <Text style = {{textAlign:'right',width: '50%',fontSize: 20, color:"#009fd6", fontWeight:"bold", marginTop: 5, margin: 10, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
+                                <Text style = {{textAlign:'right',width: '50%',fontSize: 18, color:"#009fd6", fontWeight:"bold", marginTop: 5, margin: 10, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
                                 Rs.150.34
                                 </Text>
                         </View> 
@@ -252,7 +252,7 @@ export default class HomeVehicle extends Component {
 
                         <View style={{flexDirection: 'column', alignItems: 'center'}}>
                         
-                            <Text style={{color:'black', fontWeight: 'bold', fontSize: 20}}>
+                            <Text style={{fontSize:13,color:'black', fontWeight: 'bold', fontSize: 20}}>
                                 Terms & Conditions
                             </Text>
                             <Text style={styles.registerSubText}>
@@ -294,7 +294,7 @@ export default class HomeVehicle extends Component {
                                     }}>Terms&Conditions</Text>
                                 </View>
                                 </View>
-                                {/* <Text style = {{textAlign:'right',width: '50%',fontSize: 16, color:"black", fontWeight:"normal", marginTop: 5, margin: 10, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
+                                {/* <Text style = {{textAlign:'right',width: '50%',fontSize: 13, color:"black", fontWeight:"normal", marginTop: 5, margin: 10, position:"absolute",right:0,maxWidth: width/2, maxHeight: 50}}>
                                 Rs.3.58
                                 </Text> */}
                         </View> 
@@ -304,11 +304,11 @@ export default class HomeVehicle extends Component {
                                         <Text 
                                             onPress={ () => {
 
-                                                //this.props.navigation.navigate("SignUp")
-
+                                                this.props.navigation.navigate("Tracking")
+                                                
                                             }}
                                             style={styles.continueStyle}>
-                                            CONTINUE
+                                            CONFIRM
                                         </Text>
 
                                 </View>
@@ -338,7 +338,7 @@ const styles = StyleSheet.create({
   bottomSheet: {
       flexDirection: 'column',
       alignItems: 'center',
-      
+      padding:2 ,
       backgroundColor: 'white',
       shadowRadius: 8,
       shadowOpacity: 1
@@ -417,6 +417,7 @@ const styles = StyleSheet.create({
   },  
   continueCon: {
     margin: 15,
+    marginBottom:25,
     justifyContent: 'center', 
     padding: 15, 
     borderRadius : 30, 
