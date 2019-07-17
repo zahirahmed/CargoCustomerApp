@@ -67,7 +67,7 @@ class Notifications extends Component {
             <View
               style={{
                 height: 24,
-                backgroundColor: "#117EB6"
+                backgroundColor: "#19a0d4"
               }}
             />
           ) : null}
@@ -75,7 +75,7 @@ class Notifications extends Component {
           <ToolbarAndroid
             style={{
               height: 56,
-              backgroundColor: "#117EB6",
+              backgroundColor: "#19a0d4",
               elevation: 4,
               flexDirection: "row"
             }}

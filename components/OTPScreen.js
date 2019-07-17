@@ -86,16 +86,25 @@ export default class HelloWorldApp extends Component {
                 style = {{height: "70%", width: "20%", borderColor: "gray", borderWidth: 1, padding: 10, borderRadius: 10, margin: 5}}/>
               </KeyboardAvoidingView>
             </View>
-
-            <View style= {{marginTop: 20,height: 50, width: "80%", borderRadius: 25, backgroundColor: "#009fd6", justifyContent: "center", alignItems: "center"}}>
+            <TouchableOpacity 
+              onPress={() => {
+                this.props.navigation.navigate('ChangePassword');
+              }}
+              style= {{marginTop: 20,height: 50, width: "80%", borderRadius: 25, backgroundColor: "#009fd6", justifyContent: "center", alignItems: "center"}}>
+              
+            <View >
                 <Text style = {{fontSize: 16, color: "white", fontWeight: "800"}}>CONTINUE</Text>
             </View>
+            </TouchableOpacity>
               <Text style = {{marginTop: 20, fontSize: 16, color: "black", fontWeight: "900"}}>01:59</Text>
               <Text style = {{marginTop: 30, fontSize: 16, color: "black", fontWeight: "500", textDecorationLine : "underline"}}>Resend OTP</Text>
 
-            <View style= {{position: 'absolute',bottom:10, height: 40, width: "100%", backgroundColor: "clear", flexDirection: "row",justifyContent:"center", alignItems:"center"}}>
+            <View style= {{marginTop: 40,height: 40, width: "100%", backgroundColor: "clear", flexDirection: "row",justifyContent:"center", alignItems:"center"}}>
               <Text style = {{fontSize: 15, color: "black", fontWeight: "normal"}}>Back to</Text>
-              <Text style = {{fontSize: 15, color: "#009fd6", fontWeight: "bold", textDecorationLine: "underline",paddingLeft: 5}}>SIGN IN</Text>
+              <Text 
+                onPress={() => this.props.navigation.goBack()}
+                style = {{fontSize: 15, color: "#009fd6", fontWeight: "bold", textDecorationLine: "underline",paddingLeft: 5}}>SIGN IN</Text>
+                
 
             </View>
 

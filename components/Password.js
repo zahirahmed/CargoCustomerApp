@@ -72,7 +72,9 @@ export default class Password extends Component {
                 <FloatingLabel
                     labelStyle={styles.labelInput}
                     inputStyle={styles.input}
-                    style={styles.formInput}
+                    style={{borderBottomWidth: 1, 
+                        borderColor: 'gray', 
+                        alignSelf:'stretch',}}
                     password={true}
                     disableFullscreenUI={true}
                 >Current Password</FloatingLabel>
@@ -125,6 +127,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         padding: 40,
+        backgroundColor: 'white'
          // or 'stretch'
     },
     logo: {
@@ -234,6 +237,8 @@ const styles = StyleSheet.create({
         
     },
     input: {
-        borderWidth: 0
+        borderWidth: 0,
+        height: 38,
+        fontSize: 12
     }
 });

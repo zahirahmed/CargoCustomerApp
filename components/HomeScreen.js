@@ -40,15 +40,17 @@ export default class HomeScreen extends Component {
   onActionSelected = position => {
     if (position === 0) {
       // index of 'Settings'
+      
       this.props.navigation.navigate("Notifications");
     }
   };
 
     render(){
+      console.log("cbvbchghgh",Platform.OS);
         return(
                 <ScrollView contentContainerStyle={{flex:1}}>
                     <View style={styles.container}>
-                        
+                    
                             { Platform.OS === 'android' && Platform.Version >= 20 ?
                             <View
                                 style={{
@@ -57,6 +59,7 @@ export default class HomeScreen extends Component {
                                 }}
                             />
                             : null }
+                            
 
 <ToolbarAndroid
             style={{

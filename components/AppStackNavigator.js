@@ -20,6 +20,8 @@ import QRCode from './QRCode';
 import ReviewDriver from './ReviewDriver';
 import ProfileMenu from './EditProfile';
 import React, { Component } from "react";
+import {Alert} from 'react-native';
+
 import {
   SafeAreaView,
   View,
@@ -34,8 +36,15 @@ import {
   createDrawerNavigator,
   TabNavigator,
   createMaterialTopTabNavigator,
-  DrawerItems
+  DrawerItems,
+  NavigationActions,
+  StackActions
 } from "react-navigation";
+
+const resetAction = StackActions.reset({
+  index: 0,
+  actions: [NavigationActions.navigate({ routeName: 'SignInScreen' })],
+});
 
 // Main Screens for Drawer Navigator
 export const MainStack = createStackNavigator(
@@ -142,7 +151,20 @@ const NavigationDrawer = createDrawerNavigator(
           <TouchableOpacity
             style={{flex:1}}
             onPress={() => {
-              alert("Logout");
+              //alert("Logout");
+              Alert.alert(
+                'Logout',
+                'Are you sure you want to logout?',
+                [
+                  {text: 'No', onPress: () => console.log('Cancel Pressed!')},
+                  {text: 'Yes', onPress:() => {
+                    console.log('yes Pressed!')                           
+                    //this.props.navigation.navigate('SignInScreen');
+
+                }},
+                ],
+                { cancelable: false }
+              )
             }}
           >
             <View style={{ flexDirection: "row", marginTop: 12 }}>

@@ -50,7 +50,7 @@ export default class EditProfileInside extends Component {
     render(){
         const { password } = this.state;
         return(
-            <ScrollView>
+            <ScrollView style={{backgroundColor: 'white'}}>
             <View 
                 style={styles.backgroundImage}>
 
@@ -185,6 +185,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         padding: 40,
+        backgroundColor: 'white'
          // or 'stretch'
     },
     logo: {
@@ -293,6 +294,8 @@ const styles = StyleSheet.create({
         
     },
     input: {
-        borderWidth: 0
+        borderWidth: 0,
+        height: 38,
+        fontSize: 12
     }
 });

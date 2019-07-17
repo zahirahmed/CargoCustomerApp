@@ -33,7 +33,7 @@ class ProfileMenu extends Component{
               flexDirection: "row"
             }}
             navIcon={require("../images/left-arrow.png")}
-            
+            onIconClicked={() => this.props.navigation.navigate('MyProfile')}
             titleColor="white"
             title="Edit Profile"
           >
@@ -122,7 +122,7 @@ const EditProfile = createStackNavigator (
               ),
 
             navigationOptions: ({navigation}) => ({
-                header: <ProfileMenu />,
+                header: <ProfileMenu navigation={navigation}/>,
             })
     }
 })
