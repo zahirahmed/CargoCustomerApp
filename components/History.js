@@ -56,8 +56,9 @@ export default class History extends Component {
         onPress={() => {
           this.props.navigation.navigate("HistoryDetail");
         }}>
-        <Card containerStyle={{ padding: 2 , marginBottom: 10}}>
-          <View style={{ backgroundColor: "white", padding: 5 }}>
+        <Card 
+          containerStyle={{shadowRadius:10, padding: 2 , marginBottom: 2, borderRadius:5}}>
+          <View style={{ backgroundColor: "white", padding: 8 }}>
             <View
               style={{
                 flexDirection: "row",
@@ -238,6 +239,14 @@ export default class History extends Component {
     alert("pressed!");
   };
 
+  onActionSelected = position => {
+    if (position === 0) {
+      // index of 'Settings'
+      
+      this.props.navigation.navigate("Notifications");
+    }
+  };
+
   render() {
     return (
       <View
@@ -263,6 +272,14 @@ export default class History extends Component {
           onIconClicked={() => this.props.navigation.openDrawer()}
           titleColor="white"
           title="History"
+          actions={[
+            {
+              title: "Settings",
+              icon: require("../images/notification-bell-black.png"),
+              show: "always"
+            }
+          ]}
+          onActionSelected={this.onActionSelected}
         />
         <FlatList
           data={list}
@@ -293,7 +310,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
-    marginBottom: 24
+    marginBottom: 10
   },
   basicDetail: {
     flexDirection: "column",

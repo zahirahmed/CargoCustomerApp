@@ -99,7 +99,7 @@ export default class HomePackage extends Component {
                             
                                 <View style={{backgroundColor: 'white', flexDirection: 'row', justifyContent: 'center'}}>
                                     <Text style={styles.custName}>
-                                          CUST11089001
+                                        Enter receiver and package details
                                     </Text>
                                 </View>
                                     <ScrollView contentContainerStyle={{flexGrow:1,backgroundColor: 'white'}}>
@@ -220,14 +220,45 @@ export default class HomePackage extends Component {
                                     
                                 <View style={styles.dropOffContainer}>
                                  
-                                    <View style={styles.dropOffInside}>
-                                    <TextInput
-                                        placeholderTextColor='black'    
-                                        style={styles.recNameEd}
-                                        placeholder='Dimensions'>
+                                    
+                                    <View 
+                                        style={{
+                                        flex:1,
+                                        width: '100%',
+                                        flexDirection:'row',
+                                        alignSelf:'stretch',
+                                        justifyContent:'space-between',
+                                        marginTop: 10
+                                        }}>
+                                    <View style={{...styles.dropOffInside, width:'30%'}}>
+                                        <TextInput
+                                            placeholderTextColor='black'    
+                                            style={styles.recNameEd}
+                                            placeholder='Length'>
 
-                                    </TextInput>
-                                   
+                                        </TextInput>
+                                    
+                                    </View>
+                                    <View style={{...styles.dropOffInside, width:'30%'}}>
+                                        <TextInput
+                                            placeholderTextColor='black'    
+                                            style={styles.recNameEd}
+                                            placeholder='Width'>
+
+                                        </TextInput>
+                                    
+                                    </View>
+                                    <View style={{...styles.dropOffInside, width:'30%'}}>
+                                        <TextInput
+                                            placeholderTextColor='black'    
+                                            style={styles.recNameEd}
+                                            placeholder='Height'>
+
+                                        </TextInput>
+                                    
+                                    </View>
+
+
                                     </View>
 
                                 </View>

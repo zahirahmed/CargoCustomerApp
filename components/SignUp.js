@@ -37,18 +37,30 @@ export default class SignUp extends Component {
     constructor(){
         super();
         this.state = {
-          switchValue: false
+          switchValue: false,
+          textValue:'',
+          showDetail: false
         }
+    }
+  
+    onChangeText(value){
+        this.setState({
+            textValue:''+value,
+    
+        });
     }
 
     onSwitchChange(value){
         this.setState({
             switchValue: value
         });
+        this.setState({ showDetail: !this.state.showDetail });
     }
 
     render(){
-        const { password } = this.state;
+        const { showDetail } = this.state;
+        console.log(showDetail);
+
         return(
             <SafeAreaView style={{flex:1}} backgroundColor= "white">
             <ScrollView contentContainerStyle={styles.contentContainer}>
@@ -79,6 +91,7 @@ export default class SignUp extends Component {
                     <FloatingLabel
                         labelStyle={styles.labelInput}
                         inputStyle={styles.input}
+                        autoCapitalize = 'words'
                         style={{
                             borderBottomWidth: 1,
                             width:'48%' ,
@@ -92,6 +105,7 @@ export default class SignUp extends Component {
                     <FloatingLabel
                         labelStyle={styles.labelInput}
                         inputStyle={styles.input}
+                        autoCapitalize = 'words'
                         style={{
                             borderBottomWidth: 1, 
                             borderColor: 'gray', 
@@ -108,7 +122,9 @@ export default class SignUp extends Component {
                     labelStyle={styles.labelInput}
                     inputStyle={styles.input}
                     style={styles.formInput}
+                    autoCapitalize = 'none'
                     disableFullscreenUI={true}
+                    keyboardType='email-address'
                 >Email Address</FloatingLabel>
 
                 <FloatingLabel
@@ -116,6 +132,10 @@ export default class SignUp extends Component {
                     inputStyle={styles.input}
                     style={styles.formInput}
                     disableFullscreenUI={true}
+                    keyboardType='phone-pad'
+                    value={this.state.textValue}
+                    onChangeText={(value) => this.onChangeText(value)}
+
                 >Mobile Number</FloatingLabel>
 
 
@@ -147,7 +167,7 @@ export default class SignUp extends Component {
                             color:'gray',
                             fontSize:18,
                             alignSelf:'flex-start'
-                        }}>Have any Criminal Record</Text>
+                        }}>Have any Criminal Record?</Text>
 
                     <Switch
                         style={{
@@ -155,12 +175,16 @@ export default class SignUp extends Component {
                             
                         }}
                         value={this.state.switchValue}
-                        onValueChange={(value) => this.onSwitchChange(value)}>
+                        onValueChange={(value) => {
+                            this.onSwitchChange(value)
+                            
+                        }}>
 
                     </Switch>
                     
                 </View>
 
+                {!!showDetail && (
                 <FloatingLabel
                     labelStyle={styles.labelInput}
                     inputStyle={styles.input}
@@ -171,15 +195,15 @@ export default class SignUp extends Component {
                         marginTop:10
                     }}
                     disableFullscreenUI={true}
-                >Details About Their Criminal Record</FloatingLabel>
-
+                >Details about your criminal record</FloatingLabel>
+                )}
                 <FloatingLabel
                     labelStyle={styles.labelInput}
                     inputStyle={styles.input}
                     style={styles.formInput}
                     password={true}
                     disableFullscreenUI={true}
-                >New Password</FloatingLabel>
+                >Password</FloatingLabel>
 
 
                 <FloatingLabel

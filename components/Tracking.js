@@ -29,6 +29,7 @@ export default class HistoryDetail extends Component {
       />
     )
   };
+  
   constructor(props) {
     super(props);
     this.state = { showDetail: true };

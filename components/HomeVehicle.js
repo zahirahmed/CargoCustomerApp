@@ -341,7 +341,8 @@ const styles = StyleSheet.create({
       padding:2 ,
       backgroundColor: 'white',
       shadowRadius: 8,
-      shadowOpacity: 1
+      shadowOpacity: 1,
+      marginHorizontal:10
   },
   custName:{
       fontFamily: 'Poppins-Medium',
@@ -416,7 +417,7 @@ const styles = StyleSheet.create({
       
   },  
   continueCon: {
-    margin: 15,
+    margin: 10,
     marginBottom:25,
     justifyContent: 'center', 
     padding: 15, 

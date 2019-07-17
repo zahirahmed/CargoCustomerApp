@@ -48,7 +48,7 @@ export default class SignInScreen extends Component {
                     inputStyle={styles.input}
                     style={styles.formInput}
                     disableFullscreenUI={true}
-                    
+                    password={true}
                 >Password</FloatingLabel>
     
             <TouchableOpacity

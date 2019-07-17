@@ -46,6 +46,10 @@ const resetAction = StackActions.reset({
   actions: [NavigationActions.navigate({ routeName: 'SignInScreen' })],
 });
 
+onDeleteBTN = () => {
+  this.props.navigation.dispatch(resetAction);
+}
+
 // Main Screens for Drawer Navigator
 export const MainStack = createStackNavigator(
   {
@@ -158,6 +162,7 @@ const NavigationDrawer = createDrawerNavigator(
                 [
                   {text: 'No', onPress: () => console.log('Cancel Pressed!')},
                   {text: 'Yes', onPress:() => {
+                    this.onDeleteBTN
                     console.log('yes Pressed!')                           
                     //this.props.navigation.navigate('SignInScreen');
 

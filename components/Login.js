@@ -23,7 +23,7 @@ var {height, width} = Dimensions.get('screen')
 
 var radio_props = [
     {label: 'Customer', value: 0 },
-    {label: 'Vehivle Owner', value: 1 }
+    {label: 'Vehicle Owner', value: 1 }
   ];
 
 export default class Login extends Component {
@@ -108,10 +108,10 @@ export default class Login extends Component {
                         <View style={styles.registerDialog}>
                         
                             <Text style={styles.registerNew}>
-                                Register New User
+                                Register as new user
                             </Text>
                             <Text style={styles.registerSubText}>
-                                Please select your choice {"\n"}for new register. 
+                                Please select your choice {"\n"}for registration. 
                             </Text>
 
                             <View style={{marginTop: 30}}>
